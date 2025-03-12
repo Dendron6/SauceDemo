@@ -1,0 +1,14 @@
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="8.15356">
+<testsuite name="auth.setup.ts" timestamp="2025-03-12T20:43:18.157Z" hostname="setup" tests="1" failures="0" skipped="0" time="1.475" errors="0">
+<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="1.475">
+</testcase>
+</testsuite>
+<testsuite name="saucelab.spec.ts" timestamp="2025-03-12T20:43:18.157Z" hostname="chromium" tests="3" failures="0" skipped="0" time="9.4" errors="0">
+<testcase name="[chromium] sauce deom" classname="saucelab.spec.ts" time="2.218">
+</testcase>
+<testcase name="[chromium] cart" classname="saucelab.spec.ts" time="2.528">
+</testcase>
+<testcase name="[chromium] backpack test in slow motion" classname="saucelab.spec.ts" time="4.654">
+</testcase>
+</testsuite>
+</testsuites>

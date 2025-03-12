@@ -30,7 +30,7 @@ playwright/.auth/*
 *.bmp
 *.tiff
 *.ico
-*.xml
+
 
 # Playwright auth state
 playwright/.auth/
