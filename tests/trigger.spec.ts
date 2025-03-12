@@ -3,5 +3,6 @@ const trigger = {
   description: 'trigger123',
   type: 'trigger',
   value: 'trigger123',
+  trigger: 'trigger123',
 }
 
