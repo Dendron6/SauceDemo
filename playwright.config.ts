@@ -16,7 +16,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [['junit', {
-    outputFile: 'test-results/results.xml',
+    outputFile: 'results.xml',
     stripANSI: true, // Удаляет ANSI-цвета из вывода
     includeProjectInTestName: true // Добавляет имя проекта в имена тестов
   }]],
