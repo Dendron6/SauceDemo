@@ -15,7 +15,11 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['junit', {
+    outputFile: 'test-results/results.xml',
+    stripANSI: true, // Удаляет ANSI-цвета из вывода
+    includeProjectInTestName: true // Добавляет имя проекта в имена тестов
+  }]],
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
@@ -26,7 +30,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     headless: false,
     browserName: 'chromium',
-    slowMo: 1000,
+    // slowMo: 1000,
   },
 
   projects: [
