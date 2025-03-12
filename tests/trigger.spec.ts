@@ -1,7 +1,7 @@
 const trigger = {
-  name: 'trigger1',
-  description: 'trigger1',
+  name: 'trigger123',
+  description: 'trigger123',
   type: 'trigger',
-  value: 'trigger1',
+  value: 'trigger123',
 }
 
