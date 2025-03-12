@@ -26,7 +26,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     headless: false,
     browserName: 'chromium',
-    // slowMo: 1000,
+    slowMo: 1000,
   },
 
   projects: [
