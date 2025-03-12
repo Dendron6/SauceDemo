@@ -21,6 +21,8 @@ export default defineConfig({
     includeProjectInTestName: true // Добавляет имя проекта в имена тестов
   }]],
   use: {
+    // baseURL: process.env.BASE_URL,
+    baseURL: 'https://www.saucedemo.com',
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
