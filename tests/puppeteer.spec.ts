@@ -36,8 +36,8 @@ async function scrapeSauceDemo() {
         });
 
         // Выводим результаты
-        console.log('Найдено товаров:', products.length);
-        console.log('Данные о товарах:', JSON.stringify(products, null, 2));
+        console.log('Good found:', products.length);
+        console.log('Information about goods:', JSON.stringify(products, null, 2));
 
         // Сохраняем результаты в файл
         const fs = require('fs');
@@ -46,7 +46,7 @@ async function scrapeSauceDemo() {
         return products;
 
     } catch (error) {
-        console.error('Произошла ошибка:', error);
+        console.error('An error occurred:', error);
     } finally {
         // Закрываем браузер
         await browser.close();

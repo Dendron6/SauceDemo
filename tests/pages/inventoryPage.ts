@@ -38,7 +38,7 @@ export class InventoryPage {
     }
 
     async addToCart(productName: string): Promise<void> {
-        const button = await this.page.locator(this.selectors.inventoryItem, {
+        const button = this.page.locator(this.selectors.inventoryItem, {
             has: this.page.locator(this.selectors.itemName, {
                 hasText: productName
             })
@@ -48,7 +48,7 @@ export class InventoryPage {
     }
 
     async getCartCount(): Promise<number> {
-        const badge = await this.page.locator(this.selectors.cartBadge);
+        const badge = this.page.locator(this.selectors.cartBadge);
         if (await badge.count() === 0) return 0;
         return parseInt(await badge.textContent() || '0');
     }
