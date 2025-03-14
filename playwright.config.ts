@@ -15,7 +15,8 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['junit', {
+  reporter: [['list'],
+  ['junit', {
     outputFile: 'test-results/results.xml',
     stripANSI: true, // Удаляет ANSI-цвета из вывода
     includeProjectInTestName: true // Добавляет имя проекта в имена тестов
@@ -32,7 +33,9 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     headless: false,
     browserName: 'chromium',
-    // slowMo: 1000,
+    launchOptions: {
+      slowMo: 4000, // Добавляем замедление здесь
+    },
   },
 
   projects: [
