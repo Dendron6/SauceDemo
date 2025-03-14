@@ -34,7 +34,7 @@ export default defineConfig({
     headless: false,
     browserName: 'chromium',
     launchOptions: {
-      slowMo: 4000, // Добавляем замедление здесь
+      slowMo: 2000, // Добавляем замедление здесь
     },
   },
 

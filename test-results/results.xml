@@ -1,26 +1,14 @@
-<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="38.410047">
-<testsuite name="auth.setup.ts" timestamp="2025-03-13T21:09:04.089Z" hostname="setup" tests="1" failures="0" skipped="0" time="5.36" errors="0">
-<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="5.36">
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="17.380492999999998">
+<testsuite name="auth.setup.ts" timestamp="2025-03-14T00:17:48.601Z" hostname="setup" tests="1" failures="0" skipped="0" time="5.375" errors="0">
+<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="5.375">
 </testcase>
 </testsuite>
-<testsuite name="sauceDemo.e2e.spec.ts" timestamp="2025-03-13T21:09:04.089Z" hostname="chromium" tests="5" failures="0" skipped="0" time="116.828" errors="0">
-<testcase name="[chromium] Sauce Demo Tests › should login successfully" classname="sauceDemo.e2e.spec.ts" time="21.112">
+<testsuite name="saucelab.spec.ts" timestamp="2025-03-14T00:17:48.601Z" hostname="chromium" tests="3" failures="0" skipped="0" time="19.552" errors="0">
+<testcase name="[chromium] sauce deom" classname="saucelab.spec.ts" time="5.778">
 </testcase>
-<testcase name="[chromium] Sauce Demo Tests › should load products" classname="sauceDemo.e2e.spec.ts" time="20.474">
+<testcase name="[chromium] cart" classname="saucelab.spec.ts" time="9.755">
 </testcase>
-<testcase name="[chromium] Sauce Demo Tests › should sort products" classname="sauceDemo.e2e.spec.ts" time="25.314">
-</testcase>
-<testcase name="[chromium] Sauce Demo Tests › should add products to cart" classname="sauceDemo.e2e.spec.ts" time="29.118">
-</testcase>
-<testcase name="[chromium] Sauce Demo Tests › should verify product details" classname="sauceDemo.e2e.spec.ts" time="20.81">
-</testcase>
-</testsuite>
-<testsuite name="saucelab.spec.ts" timestamp="2025-03-13T21:09:04.089Z" hostname="chromium" tests="3" failures="0" skipped="0" time="28.982" errors="0">
-<testcase name="[chromium] sauce deom" classname="saucelab.spec.ts" time="8.801">
-</testcase>
-<testcase name="[chromium] cart" classname="saucelab.spec.ts" time="12.852">
-</testcase>
-<testcase name="[chromium] backpack test in slow motion" classname="saucelab.spec.ts" time="7.329">
+<testcase name="[chromium] backpack test in slow motion" classname="saucelab.spec.ts" time="4.019">
 </testcase>
 </testsuite>
 </testsuites>
