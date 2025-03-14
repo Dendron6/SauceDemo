@@ -11,12 +11,6 @@ import { TestData } from './utils/testData';
  * @property {string} price - Product price in USD format ($XX.XX)
  * @property {string} imageUrl - Full URL to product image
  */
-interface Product {
-    name: string;
-    description: string;
-    price: string;
-    imageUrl: string;
-}
 
 /**
  * Test suite for Sauce Demo application

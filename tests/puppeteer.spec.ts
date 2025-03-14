@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import * as fs from 'fs';
 
 async function scrapeSauceDemo() {
     // Запускаем браузер
@@ -35,12 +36,11 @@ async function scrapeSauceDemo() {
             });
         });
 
-        // Выводим результаты
+        // display results
         console.log('Good found:', products.length);
         console.log('Information about goods:', JSON.stringify(products, null, 2));
 
-        // Сохраняем результаты в файл
-        const fs = require('fs');
+        // save results to file
         fs.writeFileSync('saucedemo-products.json', JSON.stringify(products, null, 2));
 
         return products;
