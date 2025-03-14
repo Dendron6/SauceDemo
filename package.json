@@ -17,17 +17,19 @@
   "devDependencies": {
     "@playwright/test": "^1.51.0",
     "@types/node": "^22.13.9",
-    "@types/puppeteer": "^7.0.4",
+    "@types/puppeteer": "7.0.4",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "dotenv": "^16.4.7",
     "eslint": "^8.57.1",
     "eslint-plugin-playwright": "^0.22.2",
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "10.9.2",
+    "debug": "4.3.4"
   },
   "dependencies": {
     "axios": "^1.8.1",
-    "puppeteer": "^21.0.0"
+    "puppeteer": "21.11.0",
+    "@puppeteer/browsers": "1.9.1",
+    "puppeteer-core": "21.11.0"
   }
 }
