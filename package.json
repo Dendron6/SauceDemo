@@ -20,16 +20,17 @@
     "@types/puppeteer": "7.0.4",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "debug": "4.3.4",
     "dotenv": "^16.4.7",
     "eslint": "^8.57.1",
     "eslint-plugin-playwright": "^0.22.2",
-    "ts-node": "10.9.2",
-    "debug": "4.3.4"
+    "playwright-zephyr": "^1.2.0",
+    "ts-node": "10.9.2"
   },
   "dependencies": {
+    "@puppeteer/browsers": "1.9.1",
     "axios": "^1.8.1",
     "puppeteer": "21.11.0",
-    "@puppeteer/browsers": "1.9.1",
     "puppeteer-core": "21.11.0"
   }
 }

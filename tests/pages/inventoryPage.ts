@@ -9,8 +9,10 @@ export interface Product {
 
 export class InventoryPage {
     private readonly page: Page;
+    readonly sauceLabsBackpack: any;
+    readonly fleeceJacket: any;
 
-    // Селекторы
+    // selectors
     private readonly selectors = {
         inventoryItem: '.inventory_item',
         itemName: '.inventory_item_name',
@@ -19,11 +21,15 @@ export class InventoryPage {
         itemImage: '.inventory_item_img img',
         sortDropdown: '.product_sort_container',
         cartBadge: '.shopping_cart_badge',
-        addToCartButton: 'button.btn_inventory'
+        addToCartButton: 'button.btn_inventory',
+        sauceLabsBackpack: '[data-test="item-4-img-link"]',
+        fleeceJacket: '[data-test="item_5_img_link"]'
     };
 
     constructor(page: Page) {
         this.page = page;
+        this.sauceLabsBackpack = this.page.locator(this.selectors.sauceLabsBackpack);
+        this.fleeceJacket = this.page.locator(this.selectors.fleeceJacket);
     }
 
     async getProducts(): Promise<Product[]> {

@@ -1,14 +1,33 @@
-<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="17.380492999999998">
-<testsuite name="auth.setup.ts" timestamp="2025-03-14T00:17:48.601Z" hostname="setup" tests="1" failures="0" skipped="0" time="5.375" errors="0">
-<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="5.375">
+<testsuites id="" name="" tests="6" failures="1" skipped="0" errors="0" time="38.235476">
+<testsuite name="auth.setup.ts" timestamp="2025-03-18T20:46:55.220Z" hostname="setup" tests="1" failures="0" skipped="0" time="4.634" errors="0">
+<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="4.634">
 </testcase>
 </testsuite>
-<testsuite name="saucelab.spec.ts" timestamp="2025-03-14T00:17:48.601Z" hostname="chromium" tests="3" failures="0" skipped="0" time="19.552" errors="0">
-<testcase name="[chromium] sauce deom" classname="saucelab.spec.ts" time="5.778">
+<testsuite name="saucelab.spec.ts" timestamp="2025-03-18T20:46:55.220Z" hostname="chromium" tests="5" failures="1" skipped="0" time="67.598" errors="0">
+<testcase name="[chromium] [T4]sauce demo aka api test" classname="saucelab.spec.ts" time="8.016">
 </testcase>
-<testcase name="[chromium] cart" classname="saucelab.spec.ts" time="9.755">
+<testcase name="[chromium] [T2]verify cart exists" classname="saucelab.spec.ts" time="11.121">
 </testcase>
-<testcase name="[chromium] backpack test in slow motion" classname="saucelab.spec.ts" time="4.019">
+<testcase name="[chromium] [T3]Sauce Labs Backpack test " classname="saucelab.spec.ts" time="10.863">
+</testcase>
+<testcase name="[chromium] [T6]should load products" classname="saucelab.spec.ts" time="7.36">
+</testcase>
+<testcase name="[chromium] [T5] fleece jacket test image to be visible" classname="saucelab.spec.ts" time="30.238">
+<failure message="saucelab.spec.ts:31:5 [T5] fleece jacket test image to be visible" type="FAILURE">
+<![CDATA[  [chromium] › saucelab.spec.ts:31:5 › [T5] fleece jacket test image to be visible ─────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\saucelab--T5-fleece-jacket-test-image-to-be-visible-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|saucelab--T5-fleece-jacket-test-image-to-be-visible-chromium\test-failed-1.png]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>
