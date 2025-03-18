@@ -11,6 +11,7 @@ package-lock.json
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/test-results/.last-run.json
 
 # IDE files
 .idea/

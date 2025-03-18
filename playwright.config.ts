@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices, PlaywrightTestConfig } from '@playwright/test';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -15,12 +15,22 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['list'],
-  ['junit', {
-    outputFile: 'test-results/results.xml',
-    stripANSI: true, // Удаляет ANSI-цвета из вывода
-    includeProjectInTestName: true // Добавляет имя проекта в имена тестов
-  }]],
+  reporter: [
+    ['list'],
+    ['junit', {
+      outputFile: 'test-results/results.xml',
+      stripANSI: true, // Удаляет ANSI-цвета из вывода
+      includeProjectInTestName: true // Добавляет имя проекта в имена тестов
+    }],
+    ['playwright-zephyr/lib/src/cloud', {
+      projectKey: 'SCRUM',
+      authorizationToken: process.env.ZEPHYR_TOKEN,
+      autoCreateTestCases: process.env.JIRA_PROJECT_KEY,
+      testCycle: {
+        name: 'FirstTestCycle', // Имя цикла
+      }
+    }]
+  ],
   use: {
     // baseURL: process.env.BASE_URL,
     baseURL: 'https://www.saucedemo.com',
@@ -34,7 +44,7 @@ export default defineConfig({
     headless: false,
     browserName: 'chromium',
     launchOptions: {
-      slowMo: 4000, // Добавляем замедление здесь
+      slowMo: 3000, // Добавляем замедление здесь
     },
   },
 

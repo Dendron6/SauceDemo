@@ -1,31 +1,36 @@
-import { test, expect, chromium } from '@playwright/test';
-// import path from 'path';
-// const authFileGit = path.join(__dirname, '../playwright/.auth/userGit.json');
+import { test, expect } from '@playwright/test';
+import { InventoryPage } from './pages/inventoryPage';
 
-
-
-test('sauce deom', async ({ page }) => {
+test('[T4]sauce demo aka api test', async ({ page }) => {
   await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
   await page.screenshot({ path: './screenshots/sauce.png' });
   await expect(page).toHaveTitle(/Swag Labs/);
 });
 
-test('cart', async ({ page }) => {
+test('[T2]verify cart exists', async ({ page }) => {
   await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
   await page.locator('[data-test="shopping-cart-link"]').click();
   await expect(page).toHaveURL(process.env.SAUCE_DEMO_URL!+'/cart.html');
   await page.screenshot({ path: './screenshots/cart.png' });
 });
 
-test('backpack test in slow motion', async () => {
-  const browser = await chromium.launch({ slowMo: 1000 }); // Slow down by 1000ms
-  const context = await browser.newContext();
-  const page = await context.newPage();
-
+test('[T3]Sauce Labs Backpack test ', async ({ page }) => {
   await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
-  await page.locator("[data-test=\"item-4-img-link\"]").click();
+  const inventoryPage = new InventoryPage(page);
+  await inventoryPage.sauceLabsBackpack.click();
   await expect(page.locator("[data-test=\"inventory-item-price\"]")).toBeVisible();
-
-  await browser.close();
 });
 
+test('[T6]should load products', async ({page}) => {
+  await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
+  const inventoryPage = new InventoryPage(page);
+  const products = await inventoryPage.getProducts();
+  expect(products.length).toBeGreaterThan(0);
+});
+
+test('[T5] fleece jacket test image to be visible', async ({ page }) => {
+  await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
+  const inventoryPage = new InventoryPage(page);
+  await inventoryPage.fleeceJacket.click();
+  await expect(page.locator("[data-test=\"item-sauce-labs-fleece-jacket-img\"]")).toBeVisible();
+});

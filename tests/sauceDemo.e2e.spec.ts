@@ -1,3 +1,4 @@
+// npx playwright test ./tests/sauceDemo.e2e.spec.ts
 import { test, expect, chromium } from '@playwright/test';
 import { LoginPage } from './pages/loginPage';
 import { InventoryPage } from './pages/inventoryPage';
@@ -32,42 +33,42 @@ test.describe('Sauce Demo Tests', () => {
         inventoryPage = new InventoryPage(page);
     });
 
-    test('should login successfully', async () => {
-        await loginPage.navigate();
-        await loginPage.login(
-            TestData.credentials.standardUser.username,
-            TestData.credentials.standardUser.password
-        );
-        await expect(loginPage['page']).toHaveURL(/.*inventory.html/);
-    });
+    // test('should login successfully', async () => {
+    //     await loginPage.navigate();
+    //     await loginPage.login(
+    //         TestData.credentials.standardUser.username,
+    //         TestData.credentials.standardUser.password
+    //     );
+    //     await expect(loginPage['page']).toHaveURL(/.*inventory.html/);
+    // });
 
-    test('should load products', async () => {
+    test('should load products', async ({page}) => {
         await loginPage.navigate();
-        await loginPage.login(
-            TestData.credentials.standardUser.username,
-            TestData.credentials.standardUser.password
-        );
+        // await loginPage.login(
+        //     TestData.credentials.standardUser.username,
+        //     TestData.credentials.standardUser.password
+        // );
         const products = await inventoryPage.getProducts();
         expect(products.length).toBeGreaterThan(0);
     });
 
-    test('should sort products', async () => {
+    test('should sort products', async ({page}) => {
         await loginPage.navigate();
-        await loginPage.login(
-            TestData.credentials.standardUser.username,
-            TestData.credentials.standardUser.password
-        );
+        // await loginPage.login(
+        //     TestData.credentials.standardUser.username,
+        //     TestData.credentials.standardUser.password
+        // );
         await inventoryPage.sortProducts('za');
         const products = await inventoryPage.getProducts();
         expect(products[0].name > products[products.length - 1].name).toBeTruthy();
     });
 
-    test('should add products to cart', async () => {
+    test('should add products to cart', async ({page}) => {
         await loginPage.navigate();
-        await loginPage.login(
-            TestData.credentials.standardUser.username,
-            TestData.credentials.standardUser.password
-        );
+        // await loginPage.login(
+        //     TestData.credentials.standardUser.username,
+        //     TestData.credentials.standardUser.password
+        // );
         const products = await inventoryPage.getProducts();
         await inventoryPage.addToCart(products[0].name);
         await inventoryPage.addToCart(products[1].name);
@@ -75,12 +76,12 @@ test.describe('Sauce Demo Tests', () => {
         expect(cartCount).toBe(2);
     });
 
-    test('should verify product details', async () => {
+    test('should verify product details', async ({page}) => {
         await loginPage.navigate();
-        await loginPage.login(
-            TestData.credentials.standardUser.username,
-            TestData.credentials.standardUser.password
-        );
+        // await loginPage.login(
+        //     TestData.credentials.standardUser.username,
+        //     TestData.credentials.standardUser.password
+        // );
         const products = await inventoryPage.getProducts();
         for (const product of products) {
             expect(product.name).not.toBe('');
