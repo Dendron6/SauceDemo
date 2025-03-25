@@ -7,8 +7,9 @@
     "lint:fix": "eslint . --ext .ts --fix",
     "test:puppeteer": "jest tests/puppeteer.spec.ts",
     "puppeteer": "ts-node tests/puppeteer.spec.ts",
-    "test": "ts-node tests/sauceDemo.e2e.spec.ts",
-    "sauce": "ts-node tests/saucelab.spec.ts"
+    "test": "npx playwright test",
+    "test:sauce": "npx playwright test tests/saucelab.spec.ts",
+    "test:e2e": "npx playwright test tests/sauceDemo.e2e.spec.ts"
   },
   "keywords": [],
   "author": "",

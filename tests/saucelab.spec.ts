@@ -14,14 +14,14 @@ test('[T2]verify cart exists', async ({ page }) => {
   await page.screenshot({ path: './screenshots/cart.png' });
 });
 
-test('[T3]Sauce Labs Backpack test ', async ({ page }) => {
+test('[T3]Sauce Labs Backpack test', async ({ page }) => {
   await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
   const inventoryPage = new InventoryPage(page);
   await inventoryPage.sauceLabsBackpack.click();
   await expect(page.locator("[data-test=\"inventory-item-price\"]")).toBeVisible();
 });
 
-test('[T6]should load products', async ({page}) => {
+test('[T6]should load products', async ({ page }) => {
   await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
   const inventoryPage = new InventoryPage(page);
   const products = await inventoryPage.getProducts();

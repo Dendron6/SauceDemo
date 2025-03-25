@@ -27,13 +27,13 @@ export default defineConfig({
       authorizationToken: process.env.ZEPHYR_TOKEN,
       autoCreateTestCases: process.env.JIRA_PROJECT_KEY,
       testCycle: {
-        name: 'FirstTestCycle', // Имя цикла
+        name: `Cycle ${new Date().toLocaleDateString()}`, // Имя цикла
       }
     }]
   ],
   use: {
     // baseURL: process.env.BASE_URL,
-    baseURL: 'https://www.saucedemo.com',
+    baseURL: process.env.BASE_URL,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
