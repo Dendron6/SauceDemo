@@ -1,18 +1,18 @@
-<testsuites id="" name="" tests="6" failures="1" skipped="0" errors="0" time="38.235476">
-<testsuite name="auth.setup.ts" timestamp="2025-03-18T20:46:55.220Z" hostname="setup" tests="1" failures="0" skipped="0" time="4.634" errors="0">
-<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="4.634">
+<testsuites id="" name="" tests="6" failures="1" skipped="0" errors="0" time="37.408829000000004">
+<testsuite name="auth.setup.ts" timestamp="2025-03-25T20:34:57.561Z" hostname="setup" tests="1" failures="0" skipped="0" time="4.467" errors="0">
+<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="4.467">
 </testcase>
 </testsuite>
-<testsuite name="saucelab.spec.ts" timestamp="2025-03-18T20:46:55.220Z" hostname="chromium" tests="5" failures="1" skipped="0" time="67.598" errors="0">
-<testcase name="[chromium] [T4]sauce demo aka api test" classname="saucelab.spec.ts" time="8.016">
+<testsuite name="saucelab.spec.ts" timestamp="2025-03-25T20:34:57.561Z" hostname="chromium" tests="5" failures="1" skipped="0" time="60.615" errors="0">
+<testcase name="[chromium] [T4]sauce demo aka api test" classname="saucelab.spec.ts" time="5.81">
 </testcase>
-<testcase name="[chromium] [T2]verify cart exists" classname="saucelab.spec.ts" time="11.121">
+<testcase name="[chromium] [T2]verify cart exists" classname="saucelab.spec.ts" time="9.033">
 </testcase>
-<testcase name="[chromium] [T3]Sauce Labs Backpack test " classname="saucelab.spec.ts" time="10.863">
+<testcase name="[chromium] [T3]Sauce Labs Backpack test" classname="saucelab.spec.ts" time="9.283">
 </testcase>
-<testcase name="[chromium] [T6]should load products" classname="saucelab.spec.ts" time="7.36">
+<testcase name="[chromium] [T6]should load products" classname="saucelab.spec.ts" time="6.281">
 </testcase>
-<testcase name="[chromium] [T5] fleece jacket test image to be visible" classname="saucelab.spec.ts" time="30.238">
+<testcase name="[chromium] [T5] fleece jacket test image to be visible" classname="saucelab.spec.ts" time="30.208">
 <failure message="saucelab.spec.ts:31:5 [T5] fleece jacket test image to be visible" type="FAILURE">
 <![CDATA[  [chromium] › saucelab.spec.ts:31:5 › [T5] fleece jacket test image to be visible ─────────────────
 
