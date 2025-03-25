@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 export interface Product {
     name: string;
@@ -9,8 +9,8 @@ export interface Product {
 
 export class InventoryPage {
     private readonly page: Page;
-    readonly sauceLabsBackpack: any;
-    readonly fleeceJacket: any;
+    readonly sauceLabsBackpack: Locator;
+    readonly fleeceJacket: Locator;
 
     // selectors
     private readonly selectors = {

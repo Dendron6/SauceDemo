@@ -15,9 +15,15 @@ module.exports = {
         es6: true
     },
     rules: {
-        '@typescript-eslint/no-unused-vars': 'warn',
-        '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/no-unused-vars': ['warn', { 
+            varsIgnorePattern: 'page',
+            argsIgnorePattern: 'page'
+        }],
+        '@typescript-eslint/no-explicit-any': 'off',
         'playwright/no-skipped-test': 'warn',
         'playwright/valid-expect': 'error'
+    },
+    globals: {
+        page: 'readonly'
     }
 }; 
