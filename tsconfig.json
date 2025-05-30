@@ -10,5 +10,5 @@
     "lib": ["ES2022", "dom"],
     "types": ["node", "@playwright/test"]
   },
-  "include": ["tests/**/*.ts"]
+  "include": ["tests/**/*.ts", "typeScriptTricks/tsTricks.ts"]
 } 

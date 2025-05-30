@@ -1,33 +1,10 @@
-<testsuites id="" name="" tests="6" failures="1" skipped="0" errors="0" time="37.408829000000004">
-<testsuite name="auth.setup.ts" timestamp="2025-03-25T20:34:57.561Z" hostname="setup" tests="1" failures="0" skipped="0" time="4.467" errors="0">
-<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="4.467">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="15.754107999999999">
+<testsuite name="auth.setup.ts" timestamp="2025-05-30T01:34:19.802Z" hostname="setup" tests="1" failures="0" skipped="0" time="4.299" errors="0">
+<testcase name="[setup] authenticate for source demo" classname="auth.setup.ts" time="4.299">
 </testcase>
 </testsuite>
-<testsuite name="saucelab.spec.ts" timestamp="2025-03-25T20:34:57.561Z" hostname="chromium" tests="5" failures="1" skipped="0" time="60.615" errors="0">
-<testcase name="[chromium] [T4]sauce demo aka api test" classname="saucelab.spec.ts" time="5.81">
-</testcase>
-<testcase name="[chromium] [T2]verify cart exists" classname="saucelab.spec.ts" time="9.033">
-</testcase>
-<testcase name="[chromium] [T3]Sauce Labs Backpack test" classname="saucelab.spec.ts" time="9.283">
-</testcase>
-<testcase name="[chromium] [T6]should load products" classname="saucelab.spec.ts" time="6.281">
-</testcase>
-<testcase name="[chromium] [T5] fleece jacket test image to be visible" classname="saucelab.spec.ts" time="30.208">
-<failure message="saucelab.spec.ts:31:5 [T5] fleece jacket test image to be visible" type="FAILURE">
-<![CDATA[  [chromium] › saucelab.spec.ts:31:5 › [T5] fleece jacket test image to be visible ─────────────────
-
-    Test timeout of 30000ms exceeded.
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\saucelab--T5-fleece-jacket-test-image-to-be-visible-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|saucelab--T5-fleece-jacket-test-image-to-be-visible-chromium\test-failed-1.png]]
-]]>
-</system-out>
+<testsuite name="interseptCalls.spec.ts" timestamp="2025-05-30T01:34:19.802Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.034" errors="0">
+<testcase name="[chromium] intercept calls with response" classname="interseptCalls.spec.ts" time="9.034">
 </testcase>
 </testsuite>
 </testsuites>

@@ -9,7 +9,10 @@
     "puppeteer": "ts-node tests/puppeteer.spec.ts",
     "test": "npx playwright test",
     "test:sauce": "npx playwright test tests/saucelab.spec.ts",
-    "test:e2e": "npx playwright test tests/sauceDemo.e2e.spec.ts"
+    "test:e2e": "npx playwright test tests/sauceDemo.e2e.spec.ts",
+    "test:intercept": "npx playwright test tests/interseptCalls.spec.ts",
+    "test:intercept:debug": "npx playwright test tests/interseptCalls.spec.ts --debug",
+    "test:intercept:headed": "npx playwright test tests/interseptCalls.spec.ts --headed"
   },
   "keywords": [],
   "author": "",

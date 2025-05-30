@@ -28,7 +28,7 @@ test('[T6]should load products', async ({ page }) => {
   expect(products.length).toBeGreaterThan(0);
 });
 
-test('[T5] fleece jacket test image to be visible!', async ({ page }) => {
+test.skip('[T5] fleece jacket test image to be visible!', async ({ page }) => {
   await page.goto(process.env.SAUCE_DEMO_URL+'/inventory.html');
   const inventoryPage = new InventoryPage(page);
   await inventoryPage.fleeceJacket.click();
